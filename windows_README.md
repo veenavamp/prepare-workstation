@@ -31,6 +31,10 @@ Open git bash or powershell in admin mode and run the below command.
 
 Choco install awscli
 
+#### install eksctl:
+
+choco install eksctl
+
 
 
 
