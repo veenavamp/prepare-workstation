@@ -15,7 +15,7 @@ cd workstation_linux
 terraform init
 
 
-terraform plan --var vpc_name= --var subnet_name= -output workstation-tf-plan
+terraform plan --var vpc_name= --var subnet_name= -out workstation-tf-plan
 
 terraform apply workstation-tf-plan
 
