@@ -1,4 +1,4 @@
-# terraform-EC2
+# Linux workstation 
 build Ec2 instance
 
 this is used to create a workstation in the public subnet and will install docker kubectl helm and awscli
