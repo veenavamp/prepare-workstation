@@ -1,0 +1,1050 @@
+2022/04/03 21:30:29 [INFO] Terraform version: 0.14.3  
+2022/04/03 21:30:29 [INFO] Go runtime version: go1.15.2
+2022/04/03 21:30:29 [INFO] CLI args: []string{"/usr/local/bin/terraform", "apply"}
+2022/04/03 21:30:29 [DEBUG] Attempting to open CLI config file: /Users/sceva/.terraformrc
+2022/04/03 21:30:29 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2022/04/03 21:30:29 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2022/04/03 21:30:29 [DEBUG] ignoring non-existing provider search directory /Users/sceva/.terraform.d/plugins
+2022/04/03 21:30:29 [DEBUG] ignoring non-existing provider search directory /Users/sceva/Library/Application Support/io.terraform/plugins
+2022/04/03 21:30:29 [DEBUG] ignoring non-existing provider search directory /Library/Application Support/io.terraform/plugins
+2022/04/03 21:30:29 [INFO] CLI command args: []string{"apply"}
+2022/04/03 21:30:29 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2022/04/03 21:30:29 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2022/04/03 21:30:29 [DEBUG] New state was assigned lineage "2548395e-5924-272d-d313-2f89565fbb3f"
+2022/04/03 21:30:29 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2022/04/03 21:30:29 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2022/04/03 21:30:29 [TRACE] providercache.fillMetaCache: scanning directory .terraform/providers
+2022/04/03 21:30:29 [TRACE] getproviders.SearchLocalDirectory: .terraform/providers is a symlink to .terraform/providers
+2022/04/03 21:30:29 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/aws v3.59.0 for darwin_amd64 at .terraform/providers/registry.terraform.io/hashicorp/aws/3.59.0/darwin_amd64
+2022/04/03 21:30:29 [TRACE] providercache.fillMetaCache: including .terraform/providers/registry.terraform.io/hashicorp/aws/3.59.0/darwin_amd64 as a candidate package for registry.terraform.io/hashicorp/aws 3.59.0
+2022/04/03 21:30:29 [DEBUG] checking for provisioner in "."
+2022/04/03 21:30:29 [DEBUG] checking for provisioner in "/usr/local/bin"
+2022/04/03 21:30:29 [INFO] Failed to read plugin lock file .terraform/plugins/darwin_amd64/lock.json: open .terraform/plugins/darwin_amd64/lock.json: no such file or directory
+2022/04/03 21:30:29 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2022/04/03 21:30:29 [INFO] backend/local: starting Apply operation
+2022/04/03 21:30:29 [TRACE] backend/local: requesting state manager for workspace "default"
+2022/04/03 21:30:29 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2022/04/03 21:30:29 [TRACE] backend/local: requesting state lock for workspace "default"
+2022/04/03 21:30:29 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2022/04/03 21:30:29 [TRACE] statemgr.Filesystem: existing snapshot has lineage "cad98014-8ed7-d9f0-3a82-fc038f8380f6" serial 30
+2022/04/03 21:30:29 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
+2022/04/03 21:30:29 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2022/04/03 21:30:29 [TRACE] backend/local: reading remote state for workspace "default"
+2022/04/03 21:30:29 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2022/04/03 21:30:29 [TRACE] statemgr.Filesystem: read snapshot with lineage "cad98014-8ed7-d9f0-3a82-fc038f8380f6" serial 30
+2022/04/03 21:30:29 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2022/04/03 21:30:29 [TRACE] backend/local: building context for current working directory
+2022/04/03 21:30:29 [TRACE] terraform.NewContext: starting
+2022/04/03 21:30:29 [TRACE] terraform.NewContext: loading provider schemas
+2022/04/03 21:30:29 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/aws"
+2022-04-03T21:30:29.924-0400 [INFO]  plugin: configuring client automatic mTLS
+2022-04-03T21:30:29.974-0400 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.59.0/darwin_amd64/terraform-provider-aws_v3.59.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/aws/3.59.0/darwin_amd64/terraform-provider-aws_v3.59.0_x5]
+2022-04-03T21:30:29.984-0400 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.59.0/darwin_amd64/terraform-provider-aws_v3.59.0_x5 pid=29924
+2022-04-03T21:30:29.984-0400 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.59.0/darwin_amd64/terraform-provider-aws_v3.59.0_x5
+2022-04-03T21:30:30.049-0400 [INFO]  plugin.terraform-provider-aws_v3.59.0_x5: configuring server automatic mTLS: timestamp=2022-04-03T21:30:30.048-0400
+2022-04-03T21:30:30.085-0400 [DEBUG] plugin.terraform-provider-aws_v3.59.0_x5: plugin address: address=/var/folders/5y/8pfdpb252jbbc_y1l8nxzbbc0000gn/T/plugin890685803 network=unix timestamp=2022-04-03T21:30:30.085-0400
+2022-04-03T21:30:30.086-0400 [DEBUG] plugin: using plugin: version=5
+2022/04/03 21:30:30 [TRACE] GRPCProvider: GetSchema
+2022-04-03T21:30:30.164-0400 [TRACE] plugin.stdio: waiting for stdio data
+2022/04/03 21:30:30 [TRACE] GRPCProvider: Close
+2022-04-03T21:30:30.252-0400 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2022-04-03T21:30:30.258-0400 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.59.0/darwin_amd64/terraform-provider-aws_v3.59.0_x5 pid=29924
+2022-04-03T21:30:30.258-0400 [DEBUG] plugin: plugin exited
+2022/04/03 21:30:30 [TRACE] terraform.NewContext: complete
+2022/04/03 21:30:30 [TRACE] backend/local: finished building terraform.Context
+2022/04/03 21:30:30 [TRACE] backend/local: requesting interactive input, if necessary
+2022/04/03 21:30:30 [TRACE] Context.Input: Prompting for provider arguments
+2022/04/03 21:30:30 [TRACE] Context.Input: Provider provider.aws declared at provider.tf:1,1-15
+2022/04/03 21:30:30 [TRACE] Context.Input: Input for provider.aws: map[string]cty.Value{}
+2022/04/03 21:30:30 [TRACE] backend/local: running validation operation
+2022/04/03 21:30:30 [INFO] terraform: building graph: GraphTypeValidate
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2022/04/03 21:30:30 [TRACE] ConfigTransformer: Starting for path: 
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  aws_instance.workstation - *terraform.NodeValidatableResource
+  aws_key_pair.mykeypair - *terraform.NodeValidatableResource
+  aws_security_group.allow-ssh - *terraform.NodeValidatableResource
+  data.aws_subnet_ids.public - *terraform.NodeValidatableResource
+  data.aws_vpc.selected - *terraform.NodeValidatableResource
+  ------
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  aws_instance.workstation - *terraform.NodeValidatableResource
+  aws_key_pair.mykeypair - *terraform.NodeValidatableResource
+  aws_security_group.allow-ssh - *terraform.NodeValidatableResource
+  data.aws_subnet_ids.public - *terraform.NodeValidatableResource
+  data.aws_vpc.selected - *terraform.NodeValidatableResource
+  var.AMIS - *terraform.NodeRootVariable
+  var.AWS_REGION - *terraform.NodeRootVariable
+  var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+  var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  var.subnet - *terraform.NodeRootVariable
+  ------
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.LocalTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.LocalTransformer with new graph:
+  aws_instance.workstation - *terraform.NodeValidatableResource
+  aws_key_pair.mykeypair - *terraform.NodeValidatableResource
+  aws_security_group.allow-ssh - *terraform.NodeValidatableResource
+  data.aws_subnet_ids.public - *terraform.NodeValidatableResource
+  data.aws_vpc.selected - *terraform.NodeValidatableResource
+  local.template_file_int (expand) - *terraform.nodeExpandLocal
+  var.AMIS - *terraform.NodeRootVariable
+  var.AWS_REGION - *terraform.NodeRootVariable
+  var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+  var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  var.subnet - *terraform.NodeRootVariable
+  ------
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.OutputTransformer
+2022/04/03 21:30:30 [TRACE] OutputTransformer: adding public_ip as *terraform.NodeApplyableOutput
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  aws_instance.workstation - *terraform.NodeValidatableResource
+  aws_key_pair.mykeypair - *terraform.NodeValidatableResource
+  aws_security_group.allow-ssh - *terraform.NodeValidatableResource
+  data.aws_subnet_ids.public - *terraform.NodeValidatableResource
+  data.aws_vpc.selected - *terraform.NodeValidatableResource
+  local.template_file_int (expand) - *terraform.nodeExpandLocal
+  output.public_ip - *terraform.NodeApplyableOutput
+  var.AMIS - *terraform.NodeRootVariable
+  var.AWS_REGION - *terraform.NodeRootVariable
+  var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+  var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  var.subnet - *terraform.NodeRootVariable
+  ------
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.StateTransformer
+2022/04/03 21:30:30 [TRACE] StateTransformer: state is empty, so nothing to do
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2022/04/03 21:30:30 [TRACE] AttachResourceConfigTransformer: attaching to "data.aws_subnet_ids.public" (*terraform.NodeValidatableResource) config from hcl.Range{Filename:"instance.tf", Start:hcl.Pos{Line:28, Column:1, Byte:565}, End:hcl.Pos{Line:28, Column:31, Byte:595}}
+2022/04/03 21:30:30 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.aws_subnet_ids.public
+2022/04/03 21:30:30 [TRACE] AttachResourceConfigTransformer: attaching to "aws_instance.workstation" (*terraform.NodeValidatableResource) config from instance.tf:1,1-38
+2022/04/03 21:30:30 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_instance.workstation
+2022/04/03 21:30:30 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group.allow-ssh" (*terraform.NodeValidatableResource) config from securitygroup.tf:1,1-42
+2022/04/03 21:30:30 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group.allow-ssh
+2022/04/03 21:30:30 [TRACE] AttachResourceConfigTransformer: attaching to "data.aws_vpc.selected" (*terraform.NodeValidatableResource) config from hcl.Range{Filename:"instance.tf", Start:hcl.Pos{Line:22, Column:1, Byte:500}, End:hcl.Pos{Line:22, Column:26, Byte:525}}
+2022/04/03 21:30:30 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.aws_vpc.selected
+2022/04/03 21:30:30 [TRACE] AttachResourceConfigTransformer: attaching to "aws_key_pair.mykeypair" (*terraform.NodeValidatableResource) config from key.tf:1,1-36
+2022/04/03 21:30:30 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_key_pair.mykeypair
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2022/04/03 21:30:30 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2022/04/03 21:30:30 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/aws\"]" provider configuration from provider.tf:1,1-15
+2022/04/03 21:30:30 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  aws_instance.workstation - *terraform.NodeValidatableResource
+  aws_key_pair.mykeypair - *terraform.NodeValidatableResource
+  aws_security_group.allow-ssh - *terraform.NodeValidatableResource
+  data.aws_subnet_ids.public - *terraform.NodeValidatableResource
+  data.aws_vpc.selected - *terraform.NodeValidatableResource
+  local.template_file_int (expand) - *terraform.nodeExpandLocal
+  output.public_ip - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.AMIS - *terraform.NodeRootVariable
+  var.AWS_REGION - *terraform.NodeRootVariable
+  var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+  var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  var.subnet - *terraform.NodeRootVariable
+  ------
+2022/04/03 21:30:30 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2022/04/03 21:30:30 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2022/04/03 21:30:30 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_instance.workstation
+2022/04/03 21:30:30 [DEBUG] ProviderTransformer: "aws_instance.workstation" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2022/04/03 21:30:30 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving data.aws_subnet_ids.public
+2022/04/03 21:30:30 [DEBUG] ProviderTransformer: "data.aws_subnet_ids.public" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2022/04/03 21:30:30 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_key_pair.mykeypair
+2022/04/03 21:30:30 [DEBUG] ProviderTransformer: "aws_key_pair.mykeypair" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2022/04/03 21:30:30 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group.allow-ssh
+2022/04/03 21:30:30 [DEBUG] ProviderTransformer: "aws_security_group.allow-ssh" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2022/04/03 21:30:30 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving data.aws_vpc.selected
+2022/04/03 21:30:30 [DEBUG] ProviderTransformer: "data.aws_vpc.selected" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2022/04/03 21:30:30 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  aws_instance.workstation - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_key_pair.mykeypair - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.allow-ssh - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_subnet_ids.public - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_vpc.selected - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.template_file_int (expand) - *terraform.nodeExpandLocal
+  output.public_ip - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.AMIS - *terraform.NodeRootVariable
+  var.AWS_REGION - *terraform.NodeRootVariable
+  var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+  var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  var.subnet - *terraform.NodeRootVariable
+  ------
+2022/04/03 21:30:30 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2022/04/03 21:30:30 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2022/04/03 21:30:30 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  aws_instance.workstation - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_key_pair.mykeypair - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.allow-ssh - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_subnet_ids.public - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_vpc.selected - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.template_file_int (expand) - *terraform.nodeExpandLocal
+  output.public_ip - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.AMIS - *terraform.NodeRootVariable
+  var.AWS_REGION - *terraform.NodeRootVariable
+  var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+  var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  var.subnet - *terraform.NodeRootVariable
+  ------
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2022/04/03 21:30:30 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_instance.workstation
+2022/04/03 21:30:30 [TRACE] AttachSchemaTransformer: attaching resource schema to data.aws_subnet_ids.public
+2022/04/03 21:30:30 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/aws"]
+2022/04/03 21:30:30 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_key_pair.mykeypair
+2022/04/03 21:30:30 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group.allow-ssh
+2022/04/03 21:30:30 [TRACE] AttachSchemaTransformer: attaching resource schema to data.aws_vpc.selected
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2022/04/03 21:30:30 [DEBUG] ReferenceTransformer: "aws_instance.workstation" references: [data.aws_subnet_ids.public aws_security_group.allow-ssh var.AMIS var.AWS_REGION aws_key_pair.mykeypair]
+2022/04/03 21:30:30 [DEBUG] ReferenceTransformer: "data.aws_subnet_ids.public" references: [data.aws_vpc.selected]
+2022/04/03 21:30:30 [DEBUG] ReferenceTransformer: "var.subnet" references: []
+2022/04/03 21:30:30 [DEBUG] ReferenceTransformer: "var.AWS_REGION" references: []
+2022/04/03 21:30:30 [DEBUG] ReferenceTransformer: "var.PATH_TO_PUBLIC_KEY" references: []
+2022/04/03 21:30:30 [DEBUG] ReferenceTransformer: "local.template_file_int (expand)" references: []
+2022/04/03 21:30:30 [DEBUG] ReferenceTransformer: "aws_key_pair.mykeypair" references: [var.PATH_TO_PUBLIC_KEY]
+2022/04/03 21:30:30 [DEBUG] ReferenceTransformer: "aws_security_group.allow-ssh" references: [data.aws_vpc.selected]
+2022/04/03 21:30:30 [DEBUG] ReferenceTransformer: "data.aws_vpc.selected" references: []
+2022/04/03 21:30:30 [DEBUG] ReferenceTransformer: "var.AMIS" references: []
+2022/04/03 21:30:30 [DEBUG] ReferenceTransformer: "var.PATH_TO_PRIVATE_KEY" references: []
+2022/04/03 21:30:30 [DEBUG] ReferenceTransformer: "output.public_ip" references: [aws_instance.workstation]
+2022/04/03 21:30:30 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: [var.AWS_REGION]
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  aws_instance.workstation - *terraform.NodeValidatableResource
+    aws_key_pair.mykeypair - *terraform.NodeValidatableResource
+    aws_security_group.allow-ssh - *terraform.NodeValidatableResource
+    data.aws_subnet_ids.public - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.AMIS - *terraform.NodeRootVariable
+    var.AWS_REGION - *terraform.NodeRootVariable
+  aws_key_pair.mykeypair - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  aws_security_group.allow-ssh - *terraform.NodeValidatableResource
+    data.aws_vpc.selected - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_subnet_ids.public - *terraform.NodeValidatableResource
+    data.aws_vpc.selected - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_vpc.selected - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.template_file_int (expand) - *terraform.nodeExpandLocal
+  output.public_ip - *terraform.NodeApplyableOutput
+    aws_instance.workstation - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.AWS_REGION - *terraform.NodeRootVariable
+  var.AMIS - *terraform.NodeRootVariable
+  var.AWS_REGION - *terraform.NodeRootVariable
+  var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+  var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  var.subnet - *terraform.NodeRootVariable
+  ------
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2022/04/03 21:30:30 [TRACE] attachDataDependenciesTransformer: data.aws_subnet_ids.public depends on []
+2022/04/03 21:30:30 [TRACE] attachDataDependenciesTransformer: data.aws_vpc.selected depends on []
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  aws_instance.workstation - *terraform.NodeValidatableResource
+    aws_key_pair.mykeypair - *terraform.NodeValidatableResource
+    aws_security_group.allow-ssh - *terraform.NodeValidatableResource
+    data.aws_subnet_ids.public - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.AMIS - *terraform.NodeRootVariable
+    var.AWS_REGION - *terraform.NodeRootVariable
+  aws_key_pair.mykeypair - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  aws_security_group.allow-ssh - *terraform.NodeValidatableResource
+    data.aws_vpc.selected - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_subnet_ids.public - *terraform.NodeValidatableResource
+    data.aws_vpc.selected - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_vpc.selected - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.template_file_int (expand) - *terraform.nodeExpandLocal
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.workstation - *terraform.NodeValidatableResource
+    aws_key_pair.mykeypair - *terraform.NodeValidatableResource
+    aws_security_group.allow-ssh - *terraform.NodeValidatableResource
+    data.aws_subnet_ids.public - *terraform.NodeValidatableResource
+    data.aws_vpc.selected - *terraform.NodeValidatableResource
+    local.template_file_int (expand) - *terraform.nodeExpandLocal
+    output.public_ip - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.AMIS - *terraform.NodeRootVariable
+    var.AWS_REGION - *terraform.NodeRootVariable
+    var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+    var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+    var.subnet - *terraform.NodeRootVariable
+  output.public_ip - *terraform.NodeApplyableOutput
+    aws_instance.workstation - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.AWS_REGION - *terraform.NodeRootVariable
+  var.AMIS - *terraform.NodeRootVariable
+  var.AWS_REGION - *terraform.NodeRootVariable
+  var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+  var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  var.subnet - *terraform.NodeRootVariable
+  ------
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  aws_instance.workstation - *terraform.NodeValidatableResource
+    aws_key_pair.mykeypair - *terraform.NodeValidatableResource
+    aws_security_group.allow-ssh - *terraform.NodeValidatableResource
+    data.aws_subnet_ids.public - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.AMIS - *terraform.NodeRootVariable
+    var.AWS_REGION - *terraform.NodeRootVariable
+  aws_key_pair.mykeypair - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  aws_security_group.allow-ssh - *terraform.NodeValidatableResource
+    data.aws_vpc.selected - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_subnet_ids.public - *terraform.NodeValidatableResource
+    data.aws_vpc.selected - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_vpc.selected - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.template_file_int (expand) - *terraform.nodeExpandLocal
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.workstation - *terraform.NodeValidatableResource
+    aws_key_pair.mykeypair - *terraform.NodeValidatableResource
+    aws_security_group.allow-ssh - *terraform.NodeValidatableResource
+    data.aws_subnet_ids.public - *terraform.NodeValidatableResource
+    data.aws_vpc.selected - *terraform.NodeValidatableResource
+    local.template_file_int (expand) - *terraform.nodeExpandLocal
+    output.public_ip - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.AMIS - *terraform.NodeRootVariable
+    var.AWS_REGION - *terraform.NodeRootVariable
+    var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+    var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+    var.subnet - *terraform.NodeRootVariable
+  output.public_ip - *terraform.NodeApplyableOutput
+    aws_instance.workstation - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.AWS_REGION - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.workstation - *terraform.NodeValidatableResource
+    aws_key_pair.mykeypair - *terraform.NodeValidatableResource
+    aws_security_group.allow-ssh - *terraform.NodeValidatableResource
+    data.aws_subnet_ids.public - *terraform.NodeValidatableResource
+    data.aws_vpc.selected - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.AMIS - *terraform.NodeRootVariable
+  var.AWS_REGION - *terraform.NodeRootVariable
+  var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+  var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  var.subnet - *terraform.NodeRootVariable
+  ------
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  aws_instance.workstation - *terraform.NodeValidatableResource
+    aws_key_pair.mykeypair - *terraform.NodeValidatableResource
+    aws_security_group.allow-ssh - *terraform.NodeValidatableResource
+    data.aws_subnet_ids.public - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.AMIS - *terraform.NodeRootVariable
+    var.AWS_REGION - *terraform.NodeRootVariable
+  aws_key_pair.mykeypair - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  aws_security_group.allow-ssh - *terraform.NodeValidatableResource
+    data.aws_vpc.selected - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_subnet_ids.public - *terraform.NodeValidatableResource
+    data.aws_vpc.selected - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_vpc.selected - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.template_file_int (expand) - *terraform.nodeExpandLocal
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.workstation - *terraform.NodeValidatableResource
+    aws_key_pair.mykeypair - *terraform.NodeValidatableResource
+    aws_security_group.allow-ssh - *terraform.NodeValidatableResource
+    data.aws_subnet_ids.public - *terraform.NodeValidatableResource
+    data.aws_vpc.selected - *terraform.NodeValidatableResource
+    local.template_file_int (expand) - *terraform.nodeExpandLocal
+    output.public_ip - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.AMIS - *terraform.NodeRootVariable
+    var.AWS_REGION - *terraform.NodeRootVariable
+    var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+    var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+    var.subnet - *terraform.NodeRootVariable
+  output.public_ip - *terraform.NodeApplyableOutput
+    aws_instance.workstation - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.AWS_REGION - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.workstation - *terraform.NodeValidatableResource
+    aws_key_pair.mykeypair - *terraform.NodeValidatableResource
+    aws_security_group.allow-ssh - *terraform.NodeValidatableResource
+    data.aws_subnet_ids.public - *terraform.NodeValidatableResource
+    data.aws_vpc.selected - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  var.AMIS - *terraform.NodeRootVariable
+  var.AWS_REGION - *terraform.NodeRootVariable
+  var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+  var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  var.subnet - *terraform.NodeRootVariable
+  ------
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  aws_instance.workstation - *terraform.NodeValidatableResource
+    aws_key_pair.mykeypair - *terraform.NodeValidatableResource
+    aws_security_group.allow-ssh - *terraform.NodeValidatableResource
+    data.aws_subnet_ids.public - *terraform.NodeValidatableResource
+    var.AMIS - *terraform.NodeRootVariable
+  aws_key_pair.mykeypair - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  aws_security_group.allow-ssh - *terraform.NodeValidatableResource
+    data.aws_vpc.selected - *terraform.NodeValidatableResource
+  data.aws_subnet_ids.public - *terraform.NodeValidatableResource
+    data.aws_vpc.selected - *terraform.NodeValidatableResource
+  data.aws_vpc.selected - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.template_file_int (expand) - *terraform.nodeExpandLocal
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    local.template_file_int (expand) - *terraform.nodeExpandLocal
+    output.public_ip - *terraform.NodeApplyableOutput
+    var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+    var.subnet - *terraform.NodeRootVariable
+  output.public_ip - *terraform.NodeApplyableOutput
+    aws_instance.workstation - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.AWS_REGION - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.workstation - *terraform.NodeValidatableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  var.AMIS - *terraform.NodeRootVariable
+  var.AWS_REGION - *terraform.NodeRootVariable
+  var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+  var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  var.subnet - *terraform.NodeRootVariable
+  ------
+2022/04/03 21:30:30 [DEBUG] Starting graph walk: walkValidate
+2022/04/03 21:30:30 [TRACE] dag/walk: visiting "var.subnet"
+2022/04/03 21:30:30 [TRACE] dag/walk: visiting "var.AWS_REGION"
+2022/04/03 21:30:30 [TRACE] vertex "var.AWS_REGION": starting visit (*terraform.NodeRootVariable)
+2022/04/03 21:30:30 [TRACE] vertex "var.AWS_REGION": visit complete
+2022/04/03 21:30:30 [TRACE] dag/walk: visiting "var.PATH_TO_PUBLIC_KEY"
+2022/04/03 21:30:30 [TRACE] vertex "var.PATH_TO_PUBLIC_KEY": starting visit (*terraform.NodeRootVariable)
+2022/04/03 21:30:30 [TRACE] vertex "var.PATH_TO_PUBLIC_KEY": visit complete
+2022/04/03 21:30:30 [TRACE] dag/walk: visiting "var.AMIS"
+2022/04/03 21:30:30 [TRACE] vertex "var.AMIS": starting visit (*terraform.NodeRootVariable)
+2022/04/03 21:30:30 [TRACE] vertex "var.AMIS": visit complete
+2022/04/03 21:30:30 [TRACE] dag/walk: visiting "local.template_file_int (expand)"
+2022/04/03 21:30:30 [TRACE] vertex "local.template_file_int (expand)": starting visit (*terraform.nodeExpandLocal)
+2022/04/03 21:30:30 [TRACE] vertex "local.template_file_int (expand)": expanding dynamic subgraph
+2022/04/03 21:30:30 [TRACE] Expanding local: adding local.template_file_int as *terraform.NodeLocal
+2022/04/03 21:30:30 [TRACE] vertex "local.template_file_int (expand)": entering dynamic subgraph
+2022/04/03 21:30:30 [TRACE] vertex "var.subnet": starting visit (*terraform.NodeRootVariable)
+2022/04/03 21:30:30 [TRACE] vertex "var.subnet": visit complete
+2022/04/03 21:30:30 [TRACE] dag/walk: visiting "var.PATH_TO_PRIVATE_KEY"
+2022/04/03 21:30:30 [TRACE] vertex "var.PATH_TO_PRIVATE_KEY": starting visit (*terraform.NodeRootVariable)
+2022/04/03 21:30:30 [TRACE] vertex "var.PATH_TO_PRIVATE_KEY": visit complete
+2022/04/03 21:30:30 [TRACE] dag/walk: visiting "local.template_file_int"
+2022/04/03 21:30:30 [TRACE] vertex "local.template_file_int": starting visit (*terraform.NodeLocal)
+2022/04/03 21:30:30 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2022/04/03 21:30:30 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": starting visit (*terraform.NodeApplyableProvider)
+2022-04-03T21:30:30.268-0400 [INFO]  plugin: configuring client automatic mTLS
+2022/04/03 21:30:30 [TRACE] vertex "local.template_file_int": visit complete
+2022/04/03 21:30:30 [TRACE] vertex "local.template_file_int (expand)": dynamic subgraph completed successfully
+2022/04/03 21:30:30 [TRACE] vertex "local.template_file_int (expand)": visit complete
+2022-04-03T21:30:30.315-0400 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.59.0/darwin_amd64/terraform-provider-aws_v3.59.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/aws/3.59.0/darwin_amd64/terraform-provider-aws_v3.59.0_x5]
+2022-04-03T21:30:30.327-0400 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.59.0/darwin_amd64/terraform-provider-aws_v3.59.0_x5 pid=29925
+2022-04-03T21:30:30.327-0400 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.59.0/darwin_amd64/terraform-provider-aws_v3.59.0_x5
+2022-04-03T21:30:30.414-0400 [INFO]  plugin.terraform-provider-aws_v3.59.0_x5: configuring server automatic mTLS: timestamp=2022-04-03T21:30:30.413-0400
+2022-04-03T21:30:30.451-0400 [DEBUG] plugin.terraform-provider-aws_v3.59.0_x5: plugin address: network=unix address=/var/folders/5y/8pfdpb252jbbc_y1l8nxzbbc0000gn/T/plugin339947904 timestamp=2022-04-03T21:30:30.451-0400
+2022-04-03T21:30:30.451-0400 [DEBUG] plugin: using plugin: version=5
+2022-04-03T21:30:30.520-0400 [TRACE] plugin.stdio: waiting for stdio data
+2022/04/03 21:30:30 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/aws\"]" provider for provider["registry.terraform.io/hashicorp/aws"]
+2022/04/03 21:30:30 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/aws"]: using explicit config only
+2022/04/03 21:30:30 [TRACE] GRPCProvider: GetSchema
+2022/04/03 21:30:30 [TRACE] GRPCProvider: PrepareProviderConfig
+2022/04/03 21:30:30 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": visit complete
+2022/04/03 21:30:30 [TRACE] dag/walk: visiting "data.aws_vpc.selected"
+2022/04/03 21:30:30 [TRACE] vertex "data.aws_vpc.selected": starting visit (*terraform.NodeValidatableResource)
+2022/04/03 21:30:30 [TRACE] dag/walk: visiting "aws_key_pair.mykeypair"
+2022/04/03 21:30:30 [TRACE] vertex "aws_key_pair.mykeypair": starting visit (*terraform.NodeValidatableResource)
+2022/04/03 21:30:30 [TRACE] GRPCProvider: ValidateDataSourceConfig
+2022/04/03 21:30:30 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2022/04/03 21:30:30 [TRACE] vertex "data.aws_vpc.selected": visit complete
+2022/04/03 21:30:30 [TRACE] dag/walk: visiting "aws_security_group.allow-ssh"
+2022/04/03 21:30:30 [TRACE] dag/walk: visiting "data.aws_subnet_ids.public"
+2022/04/03 21:30:30 [TRACE] vertex "aws_security_group.allow-ssh": starting visit (*terraform.NodeValidatableResource)
+2022/04/03 21:30:30 [TRACE] vertex "data.aws_subnet_ids.public": starting visit (*terraform.NodeValidatableResource)
+2022/04/03 21:30:30 [TRACE] GRPCProvider: ValidateDataSourceConfig
+2022/04/03 21:30:30 [TRACE] vertex "aws_key_pair.mykeypair": visit complete
+2022/04/03 21:30:30 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2022/04/03 21:30:30 [TRACE] vertex "data.aws_subnet_ids.public": visit complete
+2022-04-03T21:30:30.678-0400 [INFO]  plugin.terraform-provider-aws_v3.59.0_x5: 2022/04/03 21:30:30 [WARN] Truncating attribute path of 0 diagnostics for TypeSet: timestamp=2022-04-03T21:30:30.678-0400
+2022-04-03T21:30:30.678-0400 [INFO]  plugin.terraform-provider-aws_v3.59.0_x5: 2022/04/03 21:30:30 [WARN] Truncating attribute path of 0 diagnostics for TypeSet: timestamp=2022-04-03T21:30:30.678-0400
+2022/04/03 21:30:30 [TRACE] vertex "aws_security_group.allow-ssh": visit complete
+2022/04/03 21:30:30 [TRACE] dag/walk: visiting "aws_instance.workstation"
+2022/04/03 21:30:30 [TRACE] vertex "aws_instance.workstation": starting visit (*terraform.NodeValidatableResource)
+2022/04/03 21:30:30 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2022/04/03 21:30:30 [TRACE] vertex "aws_instance.workstation": visit complete
+2022/04/03 21:30:30 [TRACE] dag/walk: visiting "output.public_ip"
+2022/04/03 21:30:30 [TRACE] vertex "output.public_ip": starting visit (*terraform.NodeApplyableOutput)
+2022/04/03 21:30:30 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2022/04/03 21:30:30 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2022/04/03 21:30:30 [TRACE] GRPCProvider: Close
+2022/04/03 21:30:30 [TRACE] ExecuteWriteOutput: Saving Create change for output.public_ip in changeset
+2022/04/03 21:30:30 [TRACE] EvalWriteOutput: Removing output.public_ip from state (it is now null)
+2022/04/03 21:30:30 [TRACE] vertex "output.public_ip": visit complete
+2022/04/03 21:30:30 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2022/04/03 21:30:30 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2022/04/03 21:30:30 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2022-04-03T21:30:30.680-0400 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2022-04-03T21:30:30.686-0400 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.59.0/darwin_amd64/terraform-provider-aws_v3.59.0_x5 pid=29925
+2022-04-03T21:30:30.686-0400 [DEBUG] plugin: plugin exited
+2022/04/03 21:30:30 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": visit complete
+2022/04/03 21:30:30 [TRACE] dag/walk: visiting "root"
+2022/04/03 21:30:30 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2022/04/03 21:30:30 [TRACE] vertex "root": visit complete
+2022/04/03 21:30:30 [INFO] backend/local: apply calling Plan
+2022/04/03 21:30:30 [INFO] terraform: building graph: GraphTypePlan
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2022/04/03 21:30:30 [TRACE] ConfigTransformer: Starting for path: 
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  aws_instance.workstation (expand) - *terraform.nodeExpandPlannableResource
+  aws_key_pair.mykeypair (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group.allow-ssh (expand) - *terraform.nodeExpandPlannableResource
+  data.aws_subnet_ids.public (expand) - *terraform.nodeExpandPlannableResource
+  data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+  ------
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  aws_instance.workstation (expand) - *terraform.nodeExpandPlannableResource
+  aws_key_pair.mykeypair (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group.allow-ssh (expand) - *terraform.nodeExpandPlannableResource
+  data.aws_subnet_ids.public (expand) - *terraform.nodeExpandPlannableResource
+  data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+  var.AMIS - *terraform.NodeRootVariable
+  var.AWS_REGION - *terraform.NodeRootVariable
+  var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+  var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  var.subnet - *terraform.NodeRootVariable
+  ------
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.LocalTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.LocalTransformer with new graph:
+  aws_instance.workstation (expand) - *terraform.nodeExpandPlannableResource
+  aws_key_pair.mykeypair (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group.allow-ssh (expand) - *terraform.nodeExpandPlannableResource
+  data.aws_subnet_ids.public (expand) - *terraform.nodeExpandPlannableResource
+  data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+  local.template_file_int (expand) - *terraform.nodeExpandLocal
+  var.AMIS - *terraform.NodeRootVariable
+  var.AWS_REGION - *terraform.NodeRootVariable
+  var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+  var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  var.subnet - *terraform.NodeRootVariable
+  ------
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.OutputTransformer
+2022/04/03 21:30:30 [TRACE] OutputTransformer: adding public_ip as *terraform.NodeApplyableOutput
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  aws_instance.workstation (expand) - *terraform.nodeExpandPlannableResource
+  aws_key_pair.mykeypair (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group.allow-ssh (expand) - *terraform.nodeExpandPlannableResource
+  data.aws_subnet_ids.public (expand) - *terraform.nodeExpandPlannableResource
+  data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+  local.template_file_int (expand) - *terraform.nodeExpandLocal
+  output.public_ip - *terraform.NodeApplyableOutput
+  var.AMIS - *terraform.NodeRootVariable
+  var.AWS_REGION - *terraform.NodeRootVariable
+  var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+  var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  var.subnet - *terraform.NodeRootVariable
+  ------
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.StateTransformer
+2022/04/03 21:30:30 [TRACE] StateTransformer: state is empty, so nothing to do
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2022/04/03 21:30:30 [TRACE] AttachResourceConfigTransformer: attaching to "data.aws_subnet_ids.public (expand)" (*terraform.nodeExpandPlannableResource) config from hcl.Range{Filename:"instance.tf", Start:hcl.Pos{Line:28, Column:1, Byte:565}, End:hcl.Pos{Line:28, Column:31, Byte:595}}
+2022/04/03 21:30:30 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.aws_subnet_ids.public (expand)
+2022/04/03 21:30:30 [TRACE] AttachResourceConfigTransformer: attaching to "aws_instance.workstation (expand)" (*terraform.nodeExpandPlannableResource) config from instance.tf:1,1-38
+2022/04/03 21:30:30 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_instance.workstation (expand)
+2022/04/03 21:30:30 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group.allow-ssh (expand)" (*terraform.nodeExpandPlannableResource) config from securitygroup.tf:1,1-42
+2022/04/03 21:30:30 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group.allow-ssh (expand)
+2022/04/03 21:30:30 [TRACE] AttachResourceConfigTransformer: attaching to "data.aws_vpc.selected (expand)" (*terraform.nodeExpandPlannableResource) config from hcl.Range{Filename:"instance.tf", Start:hcl.Pos{Line:22, Column:1, Byte:500}, End:hcl.Pos{Line:22, Column:26, Byte:525}}
+2022/04/03 21:30:30 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.aws_vpc.selected (expand)
+2022/04/03 21:30:30 [TRACE] AttachResourceConfigTransformer: attaching to "aws_key_pair.mykeypair (expand)" (*terraform.nodeExpandPlannableResource) config from key.tf:1,1-36
+2022/04/03 21:30:30 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_key_pair.mykeypair (expand)
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2022/04/03 21:30:30 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2022/04/03 21:30:30 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/aws\"]" provider configuration from provider.tf:1,1-15
+2022/04/03 21:30:30 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  aws_instance.workstation (expand) - *terraform.nodeExpandPlannableResource
+  aws_key_pair.mykeypair (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group.allow-ssh (expand) - *terraform.nodeExpandPlannableResource
+  data.aws_subnet_ids.public (expand) - *terraform.nodeExpandPlannableResource
+  data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+  local.template_file_int (expand) - *terraform.nodeExpandLocal
+  output.public_ip - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.AMIS - *terraform.NodeRootVariable
+  var.AWS_REGION - *terraform.NodeRootVariable
+  var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+  var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  var.subnet - *terraform.NodeRootVariable
+  ------
+2022/04/03 21:30:30 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2022/04/03 21:30:30 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2022/04/03 21:30:30 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group.allow-ssh (expand)
+2022/04/03 21:30:30 [DEBUG] ProviderTransformer: "aws_security_group.allow-ssh (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2022/04/03 21:30:30 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving data.aws_vpc.selected (expand)
+2022/04/03 21:30:30 [DEBUG] ProviderTransformer: "data.aws_vpc.selected (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2022/04/03 21:30:30 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving data.aws_subnet_ids.public (expand)
+2022/04/03 21:30:30 [DEBUG] ProviderTransformer: "data.aws_subnet_ids.public (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2022/04/03 21:30:30 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_key_pair.mykeypair (expand)
+2022/04/03 21:30:30 [DEBUG] ProviderTransformer: "aws_key_pair.mykeypair (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2022/04/03 21:30:30 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_instance.workstation (expand)
+2022/04/03 21:30:30 [DEBUG] ProviderTransformer: "aws_instance.workstation (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2022/04/03 21:30:30 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  aws_instance.workstation (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_key_pair.mykeypair (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.allow-ssh (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_subnet_ids.public (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.template_file_int (expand) - *terraform.nodeExpandLocal
+  output.public_ip - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.AMIS - *terraform.NodeRootVariable
+  var.AWS_REGION - *terraform.NodeRootVariable
+  var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+  var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  var.subnet - *terraform.NodeRootVariable
+  ------
+2022/04/03 21:30:30 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2022/04/03 21:30:30 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2022/04/03 21:30:30 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  aws_instance.workstation (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_key_pair.mykeypair (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.allow-ssh (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_subnet_ids.public (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.template_file_int (expand) - *terraform.nodeExpandLocal
+  output.public_ip - *terraform.NodeApplyableOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.AMIS - *terraform.NodeRootVariable
+  var.AWS_REGION - *terraform.NodeRootVariable
+  var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+  var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  var.subnet - *terraform.NodeRootVariable
+  ------
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2022/04/03 21:30:30 [TRACE] AttachSchemaTransformer: attaching resource schema to data.aws_subnet_ids.public (expand)
+2022/04/03 21:30:30 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_instance.workstation (expand)
+2022/04/03 21:30:30 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group.allow-ssh (expand)
+2022/04/03 21:30:30 [TRACE] AttachSchemaTransformer: attaching resource schema to data.aws_vpc.selected (expand)
+2022/04/03 21:30:30 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/aws"]
+2022/04/03 21:30:30 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_key_pair.mykeypair (expand)
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2022/04/03 21:30:30 [DEBUG] ReferenceTransformer: "var.subnet" references: []
+2022/04/03 21:30:30 [DEBUG] ReferenceTransformer: "var.PATH_TO_PRIVATE_KEY" references: []
+2022/04/03 21:30:30 [DEBUG] ReferenceTransformer: "var.PATH_TO_PUBLIC_KEY" references: []
+2022/04/03 21:30:30 [DEBUG] ReferenceTransformer: "output.public_ip" references: [aws_instance.workstation (expand)]
+2022/04/03 21:30:30 [DEBUG] ReferenceTransformer: "aws_instance.workstation (expand)" references: [data.aws_subnet_ids.public (expand) aws_security_group.allow-ssh (expand) var.AMIS var.AWS_REGION aws_key_pair.mykeypair (expand)]
+2022/04/03 21:30:30 [DEBUG] ReferenceTransformer: "aws_security_group.allow-ssh (expand)" references: [data.aws_vpc.selected (expand)]
+2022/04/03 21:30:30 [DEBUG] ReferenceTransformer: "data.aws_vpc.selected (expand)" references: []
+2022/04/03 21:30:30 [DEBUG] ReferenceTransformer: "data.aws_subnet_ids.public (expand)" references: [data.aws_vpc.selected (expand)]
+2022/04/03 21:30:30 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: [var.AWS_REGION]
+2022/04/03 21:30:30 [DEBUG] ReferenceTransformer: "aws_key_pair.mykeypair (expand)" references: [var.PATH_TO_PUBLIC_KEY]
+2022/04/03 21:30:30 [DEBUG] ReferenceTransformer: "var.AMIS" references: []
+2022/04/03 21:30:30 [DEBUG] ReferenceTransformer: "var.AWS_REGION" references: []
+2022/04/03 21:30:30 [DEBUG] ReferenceTransformer: "local.template_file_int (expand)" references: []
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  aws_instance.workstation (expand) - *terraform.nodeExpandPlannableResource
+    aws_key_pair.mykeypair (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.allow-ssh (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_subnet_ids.public (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.AMIS - *terraform.NodeRootVariable
+    var.AWS_REGION - *terraform.NodeRootVariable
+  aws_key_pair.mykeypair (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  aws_security_group.allow-ssh (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_subnet_ids.public (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.template_file_int (expand) - *terraform.nodeExpandLocal
+  output.public_ip - *terraform.NodeApplyableOutput
+    aws_instance.workstation (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.AWS_REGION - *terraform.NodeRootVariable
+  var.AMIS - *terraform.NodeRootVariable
+  var.AWS_REGION - *terraform.NodeRootVariable
+  var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+  var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  var.subnet - *terraform.NodeRootVariable
+  ------
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2022/04/03 21:30:30 [TRACE] AttachDependenciesTransformer: aws_security_group.allow-ssh depends on [data.aws_vpc.selected]
+2022/04/03 21:30:30 [TRACE] AttachDependenciesTransformer: data.aws_vpc.selected depends on []
+2022/04/03 21:30:30 [TRACE] AttachDependenciesTransformer: data.aws_subnet_ids.public depends on [data.aws_vpc.selected]
+2022/04/03 21:30:30 [TRACE] AttachDependenciesTransformer: aws_instance.workstation depends on [aws_key_pair.mykeypair aws_security_group.allow-ssh data.aws_subnet_ids.public data.aws_vpc.selected]
+2022/04/03 21:30:30 [TRACE] AttachDependenciesTransformer: aws_key_pair.mykeypair depends on []
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2022/04/03 21:30:30 [TRACE] attachDataDependenciesTransformer: data.aws_vpc.selected depends on []
+2022/04/03 21:30:30 [TRACE] attachDataDependenciesTransformer: data.aws_subnet_ids.public depends on []
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2022/04/03 21:30:30 [TRACE] ForcedCBDTransformer: "aws_key_pair.mykeypair (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2022/04/03 21:30:30 [TRACE] ForcedCBDTransformer: "aws_security_group.allow-ssh (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2022/04/03 21:30:30 [TRACE] ForcedCBDTransformer: "data.aws_vpc.selected (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2022/04/03 21:30:30 [TRACE] ForcedCBDTransformer: "data.aws_subnet_ids.public (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2022/04/03 21:30:30 [TRACE] ForcedCBDTransformer: "aws_instance.workstation (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  aws_instance.workstation (expand) - *terraform.nodeExpandPlannableResource
+    aws_key_pair.mykeypair (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.allow-ssh (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_subnet_ids.public (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.AMIS - *terraform.NodeRootVariable
+    var.AWS_REGION - *terraform.NodeRootVariable
+  aws_key_pair.mykeypair (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  aws_security_group.allow-ssh (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_subnet_ids.public (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.template_file_int (expand) - *terraform.nodeExpandLocal
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.workstation (expand) - *terraform.nodeExpandPlannableResource
+    aws_key_pair.mykeypair (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.allow-ssh (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_subnet_ids.public (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+    local.template_file_int (expand) - *terraform.nodeExpandLocal
+    output.public_ip - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.AMIS - *terraform.NodeRootVariable
+    var.AWS_REGION - *terraform.NodeRootVariable
+    var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+    var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+    var.subnet - *terraform.NodeRootVariable
+  output.public_ip - *terraform.NodeApplyableOutput
+    aws_instance.workstation (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.AWS_REGION - *terraform.NodeRootVariable
+  var.AMIS - *terraform.NodeRootVariable
+  var.AWS_REGION - *terraform.NodeRootVariable
+  var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+  var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  var.subnet - *terraform.NodeRootVariable
+  ------
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  aws_instance.workstation (expand) - *terraform.nodeExpandPlannableResource
+    aws_key_pair.mykeypair (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.allow-ssh (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_subnet_ids.public (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.AMIS - *terraform.NodeRootVariable
+    var.AWS_REGION - *terraform.NodeRootVariable
+  aws_key_pair.mykeypair (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  aws_security_group.allow-ssh (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_subnet_ids.public (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.template_file_int (expand) - *terraform.nodeExpandLocal
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.workstation (expand) - *terraform.nodeExpandPlannableResource
+    aws_key_pair.mykeypair (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.allow-ssh (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_subnet_ids.public (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+    local.template_file_int (expand) - *terraform.nodeExpandLocal
+    output.public_ip - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.AMIS - *terraform.NodeRootVariable
+    var.AWS_REGION - *terraform.NodeRootVariable
+    var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+    var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+    var.subnet - *terraform.NodeRootVariable
+  output.public_ip - *terraform.NodeApplyableOutput
+    aws_instance.workstation (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.AWS_REGION - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.workstation (expand) - *terraform.nodeExpandPlannableResource
+    aws_key_pair.mykeypair (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.allow-ssh (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_subnet_ids.public (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  var.AMIS - *terraform.NodeRootVariable
+  var.AWS_REGION - *terraform.NodeRootVariable
+  var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+  var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  var.subnet - *terraform.NodeRootVariable
+  ------
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  aws_instance.workstation (expand) - *terraform.nodeExpandPlannableResource
+    aws_key_pair.mykeypair (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.allow-ssh (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_subnet_ids.public (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.AMIS - *terraform.NodeRootVariable
+    var.AWS_REGION - *terraform.NodeRootVariable
+  aws_key_pair.mykeypair (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  aws_security_group.allow-ssh (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_subnet_ids.public (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.template_file_int (expand) - *terraform.nodeExpandLocal
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.workstation (expand) - *terraform.nodeExpandPlannableResource
+    aws_key_pair.mykeypair (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.allow-ssh (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_subnet_ids.public (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+    local.template_file_int (expand) - *terraform.nodeExpandLocal
+    output.public_ip - *terraform.NodeApplyableOutput
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.AMIS - *terraform.NodeRootVariable
+    var.AWS_REGION - *terraform.NodeRootVariable
+    var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+    var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+    var.subnet - *terraform.NodeRootVariable
+  output.public_ip - *terraform.NodeApplyableOutput
+    aws_instance.workstation (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.AWS_REGION - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.workstation (expand) - *terraform.nodeExpandPlannableResource
+    aws_key_pair.mykeypair (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.allow-ssh (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_subnet_ids.public (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  var.AMIS - *terraform.NodeRootVariable
+  var.AWS_REGION - *terraform.NodeRootVariable
+  var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+  var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  var.subnet - *terraform.NodeRootVariable
+  ------
+2022/04/03 21:30:30 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2022/04/03 21:30:30 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  aws_instance.workstation (expand) - *terraform.nodeExpandPlannableResource
+    aws_key_pair.mykeypair (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.allow-ssh (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_subnet_ids.public (expand) - *terraform.nodeExpandPlannableResource
+    var.AMIS - *terraform.NodeRootVariable
+  aws_key_pair.mykeypair (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  aws_security_group.allow-ssh (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+  data.aws_subnet_ids.public (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+  data.aws_vpc.selected (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.template_file_int (expand) - *terraform.nodeExpandLocal
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    local.template_file_int (expand) - *terraform.nodeExpandLocal
+    output.public_ip - *terraform.NodeApplyableOutput
+    var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+    var.subnet - *terraform.NodeRootVariable
+  output.public_ip - *terraform.NodeApplyableOutput
+    aws_instance.workstation (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.AWS_REGION - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.workstation (expand) - *terraform.nodeExpandPlannableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  var.AMIS - *terraform.NodeRootVariable
+  var.AWS_REGION - *terraform.NodeRootVariable
+  var.PATH_TO_PRIVATE_KEY - *terraform.NodeRootVariable
+  var.PATH_TO_PUBLIC_KEY - *terraform.NodeRootVariable
+  var.subnet - *terraform.NodeRootVariable
+  ------
+2022/04/03 21:30:30 [DEBUG] Starting graph walk: walkPlan
+2022/04/03 21:30:30 [TRACE] dag/walk: visiting "var.AMIS"
+2022/04/03 21:30:30 [TRACE] vertex "var.AMIS": starting visit (*terraform.NodeRootVariable)
+2022/04/03 21:30:30 [TRACE] dag/walk: visiting "var.AWS_REGION"
+2022/04/03 21:30:30 [TRACE] vertex "var.AWS_REGION": starting visit (*terraform.NodeRootVariable)
+2022/04/03 21:30:30 [TRACE] vertex "var.AMIS": visit complete
+2022/04/03 21:30:30 [TRACE] vertex "var.AWS_REGION": visit complete
+2022/04/03 21:30:30 [TRACE] dag/walk: visiting "var.PATH_TO_PUBLIC_KEY"
+2022/04/03 21:30:30 [TRACE] vertex "var.PATH_TO_PUBLIC_KEY": starting visit (*terraform.NodeRootVariable)
+2022/04/03 21:30:30 [TRACE] vertex "var.PATH_TO_PUBLIC_KEY": visit complete
+2022/04/03 21:30:30 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2022/04/03 21:30:30 [TRACE] dag/walk: visiting "var.PATH_TO_PRIVATE_KEY"
+2022/04/03 21:30:30 [TRACE] vertex "var.PATH_TO_PRIVATE_KEY": starting visit (*terraform.NodeRootVariable)
+2022/04/03 21:30:30 [TRACE] vertex "var.PATH_TO_PRIVATE_KEY": visit complete
+2022/04/03 21:30:30 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": starting visit (*terraform.NodeApplyableProvider)
+2022/04/03 21:30:30 [TRACE] dag/walk: visiting "var.subnet"
+2022/04/03 21:30:30 [TRACE] dag/walk: visiting "local.template_file_int (expand)"
+2022/04/03 21:30:30 [TRACE] vertex "var.subnet": starting visit (*terraform.NodeRootVariable)
+2022/04/03 21:30:30 [TRACE] vertex "var.subnet": visit complete
+2022/04/03 21:30:30 [TRACE] vertex "local.template_file_int (expand)": starting visit (*terraform.nodeExpandLocal)
+2022/04/03 21:30:30 [TRACE] vertex "local.template_file_int (expand)": expanding dynamic subgraph
+2022/04/03 21:30:30 [TRACE] Expanding local: adding local.template_file_int as *terraform.NodeLocal
+2022/04/03 21:30:30 [TRACE] vertex "local.template_file_int (expand)": entering dynamic subgraph
+2022/04/03 21:30:30 [TRACE] dag/walk: visiting "local.template_file_int"
+2022/04/03 21:30:30 [TRACE] vertex "local.template_file_int": starting visit (*terraform.NodeLocal)
+2022-04-03T21:30:30.689-0400 [INFO]  plugin: configuring client automatic mTLS
+2022/04/03 21:30:30 [TRACE] vertex "local.template_file_int": visit complete
+2022/04/03 21:30:30 [TRACE] vertex "local.template_file_int (expand)": dynamic subgraph completed successfully
+2022/04/03 21:30:30 [TRACE] vertex "local.template_file_int (expand)": visit complete
+2022-04-03T21:30:30.735-0400 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.59.0/darwin_amd64/terraform-provider-aws_v3.59.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/aws/3.59.0/darwin_amd64/terraform-provider-aws_v3.59.0_x5]
+2022-04-03T21:30:30.744-0400 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.59.0/darwin_amd64/terraform-provider-aws_v3.59.0_x5 pid=29927
+2022-04-03T21:30:30.744-0400 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.59.0/darwin_amd64/terraform-provider-aws_v3.59.0_x5
+2022-04-03T21:30:30.839-0400 [INFO]  plugin.terraform-provider-aws_v3.59.0_x5: configuring server automatic mTLS: timestamp=2022-04-03T21:30:30.839-0400
+2022-04-03T21:30:30.874-0400 [DEBUG] plugin.terraform-provider-aws_v3.59.0_x5: plugin address: address=/var/folders/5y/8pfdpb252jbbc_y1l8nxzbbc0000gn/T/plugin590845026 network=unix timestamp=2022-04-03T21:30:30.874-0400
+2022-04-03T21:30:30.874-0400 [DEBUG] plugin: using plugin: version=5
+2022/04/03 21:30:30 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/aws\"]" provider for provider["registry.terraform.io/hashicorp/aws"]
+2022/04/03 21:30:30 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/aws"]: using explicit config only
+2022-04-03T21:30:30.949-0400 [TRACE] plugin.stdio: waiting for stdio data
+2022/04/03 21:30:30 [TRACE] GRPCProvider: GetSchema
+2022/04/03 21:30:31 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": visit complete
+panic: runtime error: invalid memory address or nil pointer dereference
+[signal SIGSEGV: segmentation violation code=0x2 addr=0xd8 pc=0x106c6e0]
+
+goroutine 169 [running]:
+encoding/json.(*Decoder).peek(0x8, 0xc001cfcc00, 0xc00007c060, 0x0)
+	/usr/local/go/src/encoding/json/stream.go:493 +0x95
+encoding/json.(*Decoder).Token(0x8, 0xc002216870, 0x33caac0, 0xc002216840, 0xc0022d5360)
+	/usr/local/go/src/encoding/json/stream.go:372 +0x2f
+github.com/zclconf/go-cty/cty.(*Type).UnmarshalJSON(0xc002216840, 0xc000b30400, 0x8, 0x8, 0x30e07ff0, 0xc002216840)
+	/go/pkg/mod/github.com/zclconf/go-cty@v1.7.1/cty/json.go:98 +0xcd
+encoding/json.(*decodeState).literalStore(0xc002213080, 0xc000b30400, 0x8, 0x8, 0x33caac0, 0xc002216840, 0x16, 0x0, 0x8, 0xc0022130a8)
+	/usr/local/go/src/encoding/json/decode.go:860 +0x2acb
+encoding/json.(*decodeState).value(0xc002213080, 0x33caac0, 0xc002216840, 0x16, 0xc0022d5638, 0x116906c)
+	/usr/local/go/src/encoding/json/decode.go:384 +0x1f1
+encoding/json.(*decodeState).unmarshal(0xc002213080, 0x33caac0, 0xc002216840, 0xc0022130a8, 0x0)
+	/usr/local/go/src/encoding/json/decode.go:180 +0x1ea
+encoding/json.Unmarshal(0xc000b30400, 0x8, 0x8, 0x33caac0, 0xc002216840, 0x0, 0x0)
+	/usr/local/go/src/encoding/json/decode.go:107 +0x112
+github.com/hashicorp/terraform/plugin/convert.ProtoToConfigSchema(0xc000b33810, 0xc001e683f0)
+	/home/circleci/project/project/plugin/convert/schema.go:119 +0x1e5
+github.com/hashicorp/terraform/plugin/convert.ProtoToProviderSchema(...)
+	/home/circleci/project/project/plugin/convert/schema.go:92
+github.com/hashicorp/terraform/plugin.(*GRPCProvider).GetSchema(0xc000c76000, 0x0, 0xc001167ef0, 0x0, 0xc001b09320, 0xc001e683c0, 0xc001e683f0, 0x0, 0x0, 0x0)
+	/home/circleci/project/project/plugin/grpc_provider.go:158 +0x54d
+github.com/hashicorp/terraform/terraform.(*NodeApplyableProvider).ConfigureProvider(0xc0007d4200, 0x3895f00, 0xc001c684e0, 0x3887ec0, 0xc000c76000, 0xc000377500, 0x3, 0x342ea47)
+	/home/circleci/project/project/terraform/node_provider.go:92 +0x10c
+github.com/hashicorp/terraform/terraform.(*NodeApplyableProvider).Execute(0xc0007d4200, 0x3895f00, 0xc001c684e0, 0xc00003a002, 0x30a8160, 0x32c7400)
+	/home/circleci/project/project/terraform/node_provider.go:37 +0x1df
+github.com/hashicorp/terraform/terraform.(*ContextGraphWalker).Execute(0xc001e08410, 0x3895f00, 0xc001c684e0, 0x30cf6998, 0xc0007d4200, 0x0, 0x0, 0x0)
+	/home/circleci/project/project/terraform/graph_walk_context.go:127 +0xbc
+github.com/hashicorp/terraform/terraform.(*Graph).walk.func1(0x32c7400, 0xc0007d4200, 0x0, 0x0, 0x0)
+	/home/circleci/project/project/terraform/graph.go:59 +0x962
+github.com/hashicorp/terraform/dag.(*Walker).walkVertex(0xc00020ad80, 0x32c7400, 0xc0007d4200, 0xc0011e7e40)
+	/home/circleci/project/project/dag/walk.go:387 +0x375
+created by github.com/hashicorp/terraform/dag.(*Walker).Update
+	/home/circleci/project/project/dag/walk.go:309 +0x1246

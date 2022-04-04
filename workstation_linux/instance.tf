@@ -11,7 +11,7 @@ resource "aws_instance" "workstation" {
 
   # the public SSH key
   key_name = aws_key_pair.mykeypair.key_name
-  user_data = local.template_file_int
+  #user_data = local.template_file_int
 
   tags = {
     Name = "workstation"
@@ -21,7 +21,7 @@ resource "aws_instance" "workstation" {
 
 data "aws_vpc" "selected" {
   tags = {
-    Name = var.vpc_name
+    Name = "Demo*"
   }
 }
 
@@ -29,7 +29,7 @@ data "aws_subnet_ids" "public" {
    vpc_id = data.aws_vpc.selected.id
 
   tags = {
-    Name = var.subnet_name
+    Name = "Demo-public-1"
   }
 }
 
