@@ -1,50 +1,50 @@
 # prepare-workstation
 
-## Install GIT BASH (windows)
+## Open Terminal > search for terminal
 
-### INSTALLING CHOCOLATEY
-
-#### Install with powershell.exe in admin mode
+#### Install GIT using brew
 
 ```
-
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-
+brew install git
 ```
 
-if you don't see any errors, you are ready to use Chocolatey! Type choco or choco -?
-
-Ref: https://chocolatey.org/install
-
-#### Install GIT using chocolatey
-
-```
-choco install git.install
-```
-
-ref: https://community.chocolatey.org/packages/git.install
+ref: https://git-scm.com/download/mac
 
 #### install Terraform:
 
-Open git bash or powershell in admin mode and run the below command.
+Open terminal
 
 ```
-choco install terraform
+brew tap hashicorp/tap
+
+brew install hashicorp/tap/terraform
+
+brew update
+
+brew upgrade hashicorp/tap/terraform
+
+terraform -help
 ```
+Ref :  https://learn.hashicorp.com/tutorials/terraform/install-cli
 
 #### install AWS cli:
 
-Open git bash or powershell in admin mode and run the below command.
+open terminal
 
 ```
-Choco install awscli
+curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
+sudo installer -pkg AWSCLIV2.pkg -target /
+
+curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
+
+sudo installer -pkg ./AWSCLIV2.pkg -target /
 ```
 
 #### install eksctl:
 
 ```
 
-choco install eksctl
+brew install eksctl
 
 ```
 
@@ -52,7 +52,7 @@ choco install eksctl
 
 ```
 
-choco install kubernetes-helm
+brew install helm
 
 ``
 
