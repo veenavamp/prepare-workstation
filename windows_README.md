@@ -54,7 +54,7 @@ choco install eksctl
 
 choco install kubernetes-helm
 
-``
+```
 
 ### configure aws credentials
 
