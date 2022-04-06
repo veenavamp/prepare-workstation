@@ -56,6 +56,12 @@ choco install kubernetes-helm
 
 ``
 
+### configure aws credentials
+
+```
+aws configure
+
+```
 
 
 
