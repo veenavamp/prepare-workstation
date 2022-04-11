@@ -1,5 +1,5 @@
 variable "AWS_REGION" {
-  default = "ap-south-1"
+  default = "us-east-1"
 }
 
 variable "private_subnet" {
