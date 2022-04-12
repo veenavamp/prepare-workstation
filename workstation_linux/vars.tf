@@ -22,3 +22,5 @@ variable "AMIS" {
 variable "subnet" {
   default = "public"
 }
+
+variable "vpc_id" {}
