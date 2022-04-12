@@ -23,5 +23,4 @@ variable "subnet" {
   default = "public"
 }
 
-variable "vpc_id" {
-}
+# variable "vpc_id" {}
