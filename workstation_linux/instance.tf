@@ -20,8 +20,8 @@ resource "aws_instance" "workstation" {
 }
 
 data "aws_vpc" "selected" {
-    cidr_block = "172.16.0.0/16"
-   id = var.vpc_id
+   # cidr_block = "172.16.0.0/16"
+   # id = var.vpc_id
   tags = {
     Name = "Demo*"
   }
