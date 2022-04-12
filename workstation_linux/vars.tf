@@ -23,4 +23,6 @@ variable "subnet" {
   default = "public"
 }
 
-variable "vpc_id" {}
+variable "vpc_id" {
+  cidr_block = "172.16.0.0/16"
+}
