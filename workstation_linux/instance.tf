@@ -10,7 +10,7 @@ resource "aws_instance" "workstation" {
   vpc_security_group_ids = [aws_security_group.allow-ssh.id]
   
   root_block_device {
-    volume_size = 15 # in GB <<----- I increased this!
+    volume_size = 10 # in GB <<----- I increased this!
   }
 
   # the public SSH key
