@@ -14,7 +14,7 @@ resource "aws_instance" "workstation" {
   }
 
   # the public SSH key
-  key_name = aws_key_pair.mykey.key_name
+  key_name = aws_key_pair.mykeypair.key_name
   user_data = local.template_file_int
 
   tags = {
